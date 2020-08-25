@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+  h1 Books
+  p
+  div.subheader
+      a.button(href='/books/new') Create New Book
+      form.search(action=`/books`, method="post")
+        input.searchBar(name='search' type='text' value=bookSearch.search)
+        input.searchButton(type='submit' value='Search')
+  table
+    thead
+      tr
+        th Title
+        th Author
+        th Genre
+        th.year Year
+    tbody
+      each book in books
+        tr
+          td
+            a(href=`/books/${book.id}/edit`) #{book.title}
+          td #{book.author}
+          td #{book.genre}
+          td.year #{book.year}
+        tr
+        
+  include pagination

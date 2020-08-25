@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1=message
+    h1="I'm afraid we haven't been able to find that page"
+    a.button(href='/books') Back to List of Books
+  h2= error.status
+  pre #{error.stack}

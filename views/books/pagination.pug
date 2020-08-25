@@ -1,0 +1,8 @@
+.container
+ul.pagination
+    each page in page_count
+         li
+            if page === currentPage-1
+                a.active(href=`${pageLink}${sQuery}/page/${page+1}`)=page+1  
+            else
+                a(href=`${pageLink}${sQuery}/page/${page+1}`)=page+1
