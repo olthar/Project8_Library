@@ -15,3 +15,5 @@ Domonstrating use of:
 - Pug
 - Express
 
+CSS has been updated including: table, search, pagination and background image. 
+
